@@ -1,0 +1,24 @@
+Напишите функцию countInfinity, которая принимает массив arr в качестве аргумента и возвращает количество элементов массива, не являющихся конечными.
+
+Примеры:
+
+функция countInfinity([Infinity, 1/0, -10/0, 12]) должна возвратить 3, так как данный массив содержит три элемента, имеющих не конечные значения: это Infinity, 1/0, -10/0 ;
+функция countInfinity([1, 100, 10, -10]) должна возвратить 0 (все значения в массиве являются конечными);
+функция countInfinity([Infinity, NaN]) должна возвратить 2 (оба значения Infinity, NaN не конечны).
+
+Write the countInfinite function, which takes the arr array as an argument and returns the number of non-finite array elements.
+
+Examples:
+
+countInfinity([Infinity, 1/0, -10/0, 12]) should return 3, since this array has three elements, with the final value: it is Infinity, 1/0, -10/0 ;
+countInfinity([1, 100, 10, -10]) must return 0 (all values in the array are the ultimate);
+countInfinity([Infinity, NaN]) function should return 2 (both Infinity and NaN values are not finite).
+
+function countInfinity(arr){
+  let count = 0;
+  for ( let i = 0; i < arr.length; i++) {
+    if ( Number.isFinite(arr[i]) === false)
+    count++;
+  }
+return count;
+}
