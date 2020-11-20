@@ -1,0 +1,19 @@
+Напишите функцию nDecimalDigits, которая принимает числа num (исходное число) и n (количество десятичных знаков) в качестве аргументов и возвращает число num только с n знаками в дробной части. Число не требуется округлять, просто оставьте только n десятичных знаков.
+
+Примеры:
+
+функция nDecimalDigits(6.642867, 3) должна возвратить 6.642, результат округления до трех десятичных знаков 6.643 - будет неверный.
+
+функция nDecimalDigits(4.1567, 2) должна возвратить 4.15, результат округления до двух десятичных знаков 4.16 - будет неверный.
+
+Write a function n Decimal Digits that takes the numbers num (the original number) and n (the number of decimal places) as arguments and returns the number num with only n digits in the fractional part. You don't need to round the number, just leave only n decimal places.
+
+Examples:
+
+the function n Decimal Digits(6.642867, 3) should return 6.642, the result of rounding to three decimal places 6.643 will be incorrect.
+
+the function n Decimal Digits(4.1567, 2) should return 4.15, and the result of rounding to two decimal places 4.16 will be incorrect.
+
+function nDecimalDigits(num, n){
+  return Math.trunc(num * 10 ** n) / 10 ** n;
+}
