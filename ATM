@@ -6,7 +6,7 @@ You are given money in nominal value of n with 1<=n<=1500.
 
 Try to find minimal number of notes that must be used to repay in dollars, or output -1 if it is impossible.
 
-Good Luck!!!
+
 
 function solve(n) {
  if ( n % 10) return -1;
